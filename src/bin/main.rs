@@ -43,6 +43,15 @@ fn main() -> ! {
     let config = esp_hal::Config::default().with_cpu_clock(CpuClock::max());
     let peripherals = esp_hal::init(config);
 
+    // TODO: setup network, multi thread or async?
+    // let time_group = TimerGroup::new(peripherals.TIMG0);
+    // let mut rng = Rng::new(peripherals.RNG);
+    // let rand = rng.random();
+    // let wifi_controller = esp_wifi::init(time_group.timer0, rng).unwrap();
+    // let (controller, interfaces) = wifi::new(&wifi_controller, peripherals.WIFI).unwrap();
+    // let device = interfaces.sta;
+    // run_net(controller, device, rand);
+
     // let mut led = Output::new(peripherals.GPIO2, Level::High, OutputConfig::default());
     // led.set_high();
     let delay = Delay::new();

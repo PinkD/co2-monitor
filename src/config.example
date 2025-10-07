@@ -1,0 +1,4 @@
+const SSID: &str = "SSID";
+const PASSWORD: &str = "PASSWORD";
+const STATIC_IP: &str = "STATIC_IP";
+const GATEWAY_IP: &str = "GATEWAY_IP";

@@ -22,6 +22,13 @@ esp-alloc = "0.8.0"
 embedded-graphics = "0.8.1"
 tinybmp = "0.6.0"
 
+# network
+esp-wifi = { version = "0.15.0", features = ["esp32", "wifi", "smoltcp"] }
+smoltcp = { version = "0.12.0", default-features = false, features = ["socket-raw"] }
+blocking-network-stack = { git = "https://github.com/bjoernQ/blocking-network-stack.git", rev = "b3ecefc222d8806edd221f266999ca339c52d34e" }
+# by required blocking-network-stack
+embedded-io = { version = "0.6.1", default-features = false }
+
 [profile.dev]
 # Rust debug is too slow.
 # For debug builds always builds with some optimization
