@@ -1,0 +1,4 @@
+pub const SSID: &str = "SSID";
+pub const PASSWORD: &str = "PASSWORD";
+pub const METRIC_SERVER: &str = "METRIC_SERVER";
+pub const METRIC_PORT: u16 = 7004;

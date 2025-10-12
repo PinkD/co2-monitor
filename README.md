@@ -10,6 +10,16 @@ Measure temperature/humidity/co2 using esp32 and scd41 sensor, then display the 
 cargo run --package co2-monitor --bin co2-monitor
 ```
 
+### run metric server
+
+```bash
+cd metric_server
+docker build -t co2-monitor-server .
+docker run -d --name co2-monitor-server -p 7004:7004/udp -p 127.0.0.1:7004:7004/tcp co2-monitor-server:latest
+# add 127.0.0.1:7004 to your prometheus config
+vim /etc/prometheus/prometheus.yml
+```
+
 ## hardware
 
 - esp32: https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf
@@ -22,6 +32,10 @@ cargo run --package co2-monitor --bin co2-monitor
 ### monitor with scd41
 
 <img src="assets/co2-result.jpg" width="512">
+
+### export metric for prometheus
+
+<img src="assets/metric-server.jpg" width="512">
 
 ### show img with e-ink
 
@@ -40,7 +54,3 @@ origin(gray):
 result:
 
 <img src="assets/kujo-result.jpg" width="512">
-
-## TODOs
-
-- metric over network(for prometheus/vmetric)

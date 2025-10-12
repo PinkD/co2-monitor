@@ -4,8 +4,7 @@ use core::cell::RefCell;
 use esp_hal::delay::Delay;
 use esp_hal::i2c::master::{Error, I2c};
 use esp_hal::Blocking;
-use esp_println::println;
-use crate::{debug, log};
+use log::debug;
 
 // ref: https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf
 // read measurement, call start_periodic_measurement before call this

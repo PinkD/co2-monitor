@@ -1,6 +1,5 @@
 use alloc::string::String;
-use esp_println::println;
-use crate::{debug, log};
+use log::debug;
 
 
 pub struct DebugPrinter {

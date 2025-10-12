@@ -6,4 +6,5 @@ pub mod e_paper;
 pub mod error;
 pub mod canvas;
 pub mod utils;
-pub mod log;
+pub mod net;
+pub mod config;

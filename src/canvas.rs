@@ -12,8 +12,7 @@ use embedded_graphics::primitives::Rectangle;
 use embedded_graphics::text::renderer::TextRenderer;
 use embedded_graphics::text::Baseline;
 use embedded_graphics::{mono_font, Pixel};
-use esp_println::println;
-use crate::{debug, log, warn};
+use log::{debug, warn};
 
 use crate::scd41::MeasureResult;
 

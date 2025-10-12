@@ -1,5 +1,4 @@
 use crate::utils::DebugPrinter;
-use crate::{debug, log};
 use alloc::string::ToString;
 use alloc::vec;
 use alloc::vec::Vec;
@@ -10,7 +9,7 @@ use esp_hal::gpio::{Input, Output};
 use esp_hal::spi::master::Spi;
 use esp_hal::spi::Error;
 use esp_hal::Blocking;
-use esp_println::println;
+use log::debug;
 
 // ref 1: https://www.waveshare.net/wiki/Pico-ePaper-2.9
 // ref 2: https://www.waveshare.net/w/upload/7/79/2.9inch-e-paper-v2-specification.pdf
